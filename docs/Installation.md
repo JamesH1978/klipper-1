@@ -1,8 +1,8 @@
 # Installation
 
 These instructions assume the software will run on a linux based host
-running a klipper compatible front end. It is recommended that a
-SBC(Small Board Computer) such as a Raspberry Pi or Debian based linux 
+running a Klipper compatible front end. It is recommended that a
+SBC(Small Board Computer) such as a Raspberry Pi or Debian based Linux 
 device be used as the host machine (see the 
 [FAQ](FAQ.md#can-i-run-klipper-on-something-other-than-a-raspberry-pi-3)
 for other options).
@@ -38,31 +38,30 @@ printer configuration file, then start with the closest example
 
 ## Interacting with Klipper
 
-Klipper is a 3d printer firmware, so needs some way for the user to
+Klipper is a 3d printer firmware, so it needs some way for the user to
 interact with it. 
 
-Currently the best choice are front ends that retrieve information through the 
-popular Moonraker API, their is also the option to use Octoprint to control
+Currently the best choices are front ends that retrieve information through the 
+popular Moonraker API, there is also the option to use Octoprint to control
 Klipper.
 
-The choice is up to the users on what to use, but the underlying Klipper is the
+The choice is up to the user on what to use, but the underlying Klipper is the
 same in all cases. We encourage users to research the options available and
 make an informed decision.
 
 ## Obtaining an OS image for SBC's
 
 There are many ways to obtain an OS image for Klipper for SBC use, most depend on
-what front end you wish to use. Klipper is a firmware, so needs some way
-to interact with it. Some manafactures of these SBC boards also provide their own
-Klipper-centric images.
+what front end you wish to use. Some manafactures of these SBC boards also provide
+their own Klipper-centric images.
 
 The two main Moonraker based front ends are Fluidd and Mainsail, the latter of
-which has an premade install image "MainsailOS", this has the option for
+which has a premade install image "MainsailOS", this has the option for
 Raspberry Pi and some OrangePi varianta. Details can be found at
 http://docs.mainsailOS.xyz
 
 Fluidd can be installed via KIAUH(Klipper Install And Update Helper), which
-is explained below and is a 3rd party installer for all things Klipper
+is explained below and is a 3rd party installer for all things Klipper.
 
 OctoPrint can be installed via the popular OctoPi image or via KIAUH, this
 process is explained in (Octoprint.md)
@@ -135,7 +134,9 @@ It should report something similar to the following:
 It's common for each printer to have its own unique serial port name.
 This unique name will be used when flashing the micro-controller. It's
 possible there may be multiple lines in the above output - if so,
-choose the line corresponding to the micro-controller (see the
+choose the line corresponding to the micro-controller If many
+items are listed and the choice is ambigous, unplug the board and
+run the command again, the missing item will be your print board(see the
 [FAQ](FAQ.md#wheres-my-serial-port) for more information).
 
 For common micro-controllers with STM32 or clone chips, LPC chips and
@@ -180,7 +181,7 @@ The next step is to copy the
 the host.
 
 Arguably the easiest way to set the Klipper configuration file is using the
-built in editors in Mainsail or Fluidd. Thes will allow you to open
+built in editors in Mainsail or Fluidd. These will allow the user to open
 the configuration examples and save them to be printer.cfg.
 
 Another option is to use a desktop editor that supports editing files 
